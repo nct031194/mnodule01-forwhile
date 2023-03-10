@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 1: Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ hiển thị từ 0 đến 5.</h3>
+    <button type="button" onclick="showMessage()" >Xem</button><br>
+    <p id="result1"></p>
+    <h3>Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.</h3>
+    <button type="button" onclick="showMessage2()">Xem</button><br>
+    <p id="result2"></p>
+    
+    <script>
+        function showMessage(){
+    let text = ""
+    let i 
+    for (i=0;i<=5;i++){
+        text += 'number is ' + i + '<br>'
+    }
+    document.getElementById('result1').innerHTML= text
+} 
+    function showMessage2(){
+        let number = +prompt('Nhap vao gia tri')
+        if (number > 0){
+            let i=0;
+            let sum = 0;
+
+            for ( i = 1 ; i <= number ;  i++ ){
+                sum += i
+            }
+            document.getElementById('result2').innerHTML = sum
+        }
+        else {
+            alert('Gia tri phai lon hon 0 !!!')
+        }
+    }
+    </script>
+</body>
+</html>
