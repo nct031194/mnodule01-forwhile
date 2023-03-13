@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Bảng Cửu Chương </h2>
+    <button type="button" onclick="showMessage()">CLick here</button><br>
+    <p id="result1"></p><br>
+    <script>
+        function showMessage(){
+            let sout ;
+            sout = "<table border='1' width='500px' cellspacing='0' cellpadding='3'>";
+            for (a = 2;a < 10;a++){
+                sout = sout + '<tr>'
+                for (b = 1; b < 10 ; b++ ){
+                    sout = sout + "<td>" + a + "x" + b + "=" + (a*b) + "</td>" ;
+                }
+                sout = sout + "</tr>";
+            }
+            sout = sout + "</table>";
+            document.getElementById('result1').innerHTML=sout            
+        }
+    </script>
+</body>
+</html>
