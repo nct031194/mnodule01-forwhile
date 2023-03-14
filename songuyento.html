@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Bước 1: Khai báo biến số nguyên numbers và nhập cho nó một giá trị từ bàn phím để lưu số lượng số nguyên tố cần in ra.</h2>
+    <button type="button" onclick="showMessage()">Click here</button><br>
+    <p id="result1"></p>
+    <script>
+        // Math.sqrt(N)
+        function showMessage(){ 
+            let numbers = +parseInt(prompt('Nhap vao so luong so nguyen to: '));
+            let N = 2
+            let result = ""
+            if (numbers == 1){
+                document.write(2)
+            }
+            else{
+                document.write(2 + '<br>')
+                N=3;
+                let count = 1
+            while( count < numbers ){ 
+                 let check = true;
+                 for (i=2 ; i<N ; i++ ){
+                    if( N % i == 0 ){
+                        check = false;
+                        break;
+                    }
+                 }
+                 if (check){
+                    document.write(N + "<br>")
+                    count++;
+                 }  
+                 N++;  
+                 }  
+                }              
+    }
+
+    // let number = parseInt(+prompt('Nhap so luong so nguyen to can hien thi:'));
+    //     let count = 1, k ;
+        // if(number == 1){
+        //     document.write(2);
+        // }else{
+        //     document.write(2 + "<br>");
+        //     let checknum = 3;
+        //     while(count < number){
+        //         let check = true;
+        //         for(let i = 2; i < checknum; i++){
+        //             if(checknum % i ==0){
+        //                 check = false;
+        //                 break;
+        //             }
+        //         }
+        //         if(check){
+        //             document.write(checknum + "<br>");
+        //             count++;
+        //         }
+        //         checknum++;
+        //     }
+        // }
+    </script>
+</body>
+</html>
